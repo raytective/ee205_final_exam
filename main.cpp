@@ -9,8 +9,9 @@
 /// @date   13_May_2022
 ///////////////////////////////////////////////////////////////////////////////
 #include <iostream>
-#include "Square.h"
 #include <assert.h>
+#include "Square.h"
+
 #define DDEBUG
 
 int main() {
@@ -20,7 +21,7 @@ int main() {
         Rectangle sillyRectangle(0,0);
         assert(false);
     } catch (std::exception) {
-        std::cout << "Can't have rectange length/width < 0" << std::endl;
+        std::cout << "Can't have rectangle length/width < 0" << std::endl;
     }
 
     /// testing square (0 width/length)
@@ -38,6 +39,15 @@ int main() {
     Rectangle funnyRectangle( 35, 10 );
     std::cout << "Length of funny rectange is " << funnyRectangle.getLength() << std::endl;
     std::cout << "Width of funny square is " << funnyRectangle.getWidth() << std::endl;
+
+    /// i'm scared of math
+    Square squareArea( 1.5 );
+    std::cout << "Area of square is " << squareArea.compute_area() << std::endl;
+
+    Rectangle rectangleArea( 5.54, 24.2 );
+    std::cout << "Area of rectangle is " << rectangleArea.compute_area() << std::endl;
+
+    std::cout << std::endl;;
 #endif
 
     std::cout << "Hello, World!" << std::endl;
